@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGRAMACION III</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fast code"></i>Guía de etiquetas en HTML</h1>
+            <p>Ejemplos prácticos y explicaciones llevadas a cabo en HTML y CSS</p>
+        </header>
+
+        <nav>
+            <ul class="nav-links">
+<li><a href="#Texto" class="active">Etiquetas de texto</a></li>
+<li><a href="#Multimedia">Multimedia</a></li>
+<li><a href="#Estructura">Estructura</a></li>
+<li><a href="#Listas">Listas</a></li>
+<li><a href="#Tablas">Tablas</a></li>
+<li><a href="#Formularios">Formularios</a></li> 
+            </ul>
+        </nav>
+
+        <div class="tags-container">
+            <!--Encabezados de texto H1 a H6-->
+            <div class="tag-card" id="Texto">
+                <div class="tag-header">
+                    <h2><i class="fast heading"></i>Encabezados &lt;h1&gt; a &lt;h6&gt;</h2>
+                </div>
+                <div class="tag-body">
+                    <div class="tag-section">
+                        <h3><i class="fast info-circle"></i>Descripción</h3>
+                        <p>Los encabezados definen la estructura jerárquica del contenido.
+                            &lt;h1&gt; es el más importante (título principal) y
+                            &lt;h6&gt; el menos importante.
+                        </p>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast cog"></i>Atributos Comúnes</h3>
+                        <ul class="attributes-list">
+                            <li><strong>id</strong>: Identificador único para el elemento</li>
+                            <li><strong>class</strong>: Clase CSS para aplicar estilos</li>
+                            <li><strong>style</strong>: Estilos CSS en linea</li>
+                            <li><strong>title</strong>: Información adicional (se muestra al pasar el mouse)</li>
+                        </ul>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast code"></i>Ejemplo de código</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;h1&gt; Título Principal &lt;/h1&gt;
+                                &lt;h2&gt;Subtítulo&lt;/h2&gt;
+                                &lt;h3&gt;Sección&lt;/h3&gt;
+                                &lt;h4&gt;Subsección&lt;/h4&gt;
+                                &lt;h5&gt;Apartado&lt;/h5&gt;
+                                &lt;h6&gt;Detalle&lt;/h6&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast paint-brush"></i>CSS Asociado</h3>
+                        <div class="code-example">
+                            <pre><code>
+                                h1 { font-size: 2rem; }
+                                h2 { font-size: 1.8rem; }
+                                h3 { font-size: 1.6rem; }
+                                h4 { font-size: 1.4rem; }
+                                h5 { font-size: 1.2rem; }
+                                h6 { font-size: 1rem; }
+                            </code></pre>
+                        </div>
+                        <p>Estas reglas establecen los tamaños
+                            de fuentes decrecientes para cada nivel de encabezado.</p>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast-eye"></i>Resultado Visual</h3>
+                        <div class="visual-example">
+                            <h1>Título Principal</h1>
+                            <h2>Subtítulo</h2>
+                            <h3>Sección</h3>
+                            <h4>Subsección</h4>
+                            <h5>Apartado</h5>
+                            <h6>Detalle</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Párrafos <p>-->
+            <div class="tag-card">
+                <div class="tag-header">
+                    <h2><i class="fast-paragraph"></i>Párrafo &lt;p&gt;</h2>
+                </div>
+                <div class="tag-body">
+                    <div class="tag-section">
+                        <h3><i class="fast info-circle"></i>Descripción</h3>
+                        <p>Define un párrafo de texto. Es la etiqueta más utilizada
+                            para contenido textual de un sitio web.
+                        </p>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast code"></i>Ejemplo de Código</h3>
+                        <ul class="attributes-list">
+                            <li><strong>align</strong>: Alineación del texto (left, right, center, justify)</li>
+                            <li><strong>id</strong>: Identificador único</li>
+                            <li><strong>class</strong>: Clase de CSS para estilos</li>
+                            <li><strong>style</strong>: Estilos CSS en linea</li>
+                        </ul>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast code"></i>Ejemplo de código</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;
+                                &lt;p&gt;Otro párrafo con &lt;strong&gt; texto en negrita.&lt;/strong&gt;
+                                y &lt;em&gt;texto en cursiva &lt;/em&gt;.&lt;/p&gt; 
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast paint-brush"></i>CSS Asociado</h3>
+                        <div class="code-example">
+                            <pre><code>
+                                p {
+                                    margin-bottom: 1rem;
+                                    line-height: 1.6;
+                                    text-align: justify;
+                                }
+                            </code></pre>
+                        </div>
+                        <p>Estas reglas mejoran la legibilidad con espaciado entre párrafos
+                            y altura de linea.
+                        </p>
+                    </div>
+                    <div class="tag-section">
+                        <h3><i class="fast-link"></i>Enlace &lt;a&gt;</h3>
+                    </div>
+                    <div class="tag-section">
+                        <h3><i class="fast-cog"></i>Atributos Comúnes</h3>
+                        <ul class="attributes-list">
+                            <li><strong>href</strong>: URL del recurso de destino (obligatorio)</li>
+                            <li><strong>target</strong>: Donde abrir el enlace (_blank, _self, _parent, _top)</li>
+                            <li><strong>rel</strong>: Relación entre el documento actual y el enlace</li>
+                            <li><strong>download</strong>: Indica que el enlace es para descargar un archivo.</li>
+                            <li><strong>title</strong>: Información adicional sobre el enlace</li>
+                        </ul>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast-code"></i>Ejemplo de código</h3>
+                        <div class="code-example">
+                            <pre><code>
+                                &lt;a href="https://etitc.edu.co" target="_blank"&gt;
+                                Visita nuestro sitio web
+                                &lt;/a&gt;
+                                &lt;a href="mailto:wacallejasg@itc.edu.co"&gt;Enviar Correo&lt;/a&gt;
+                                &lt;a href="#Seccion"&gt;Ir a sección #&lt;/a&gt;
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast paint-brush"></i>CSS Asociado</h3>
+                        <div class="code-example">
+                            <pre><code>
+                                a{
+                                    color: var(--primary-color);
+                                    text-decoration: none;
+                                    transition: color 0.3s;
+                                }
+
+                                a:hover {
+                                    color: var(--secondary-color);
+                                    text-decoration: underline;
+                                }
+                            </code></pre>
+                        </div>
+                        <p>Estas reglas estilizan los enlaces con colores y efectos tipo hover.</p>
+
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast-eye"></i>Resultado Visual</h3>
+                        <div class="visual-example">
+                            <p><a href="#">Visita nuestro sitio web</a></p>
+                            <p><a href="#">Nuestro Correo</a></p>
+                            <p><a href="#">Ir a la Sección</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Etiqueta de imágen <img> -->
+            <div class="tag-card">
+                <div class="tag-header">
+                    <h2><i class="fast-image"></i>Imagen &lt;img&gt;</h2>
+                </div>
+                <div class="tag-section">
+                    <h3><i class="fast info-circle"></i>Descripción</h3>
+                    <p>Inserta una imagen en el documento, esta es una etiqueta autocerrada
+                        que no requiere etiqueta de cierre.
+                    </p>
+                </div>
+
+                <div class="tag-section">
+                    <h3><i class="fast-cog"></i>Atributos Comúnes</h3>
+                    <ul class="attributes-list">
+                        <li><strong>src</strong>: Ruta de la imagen (obligatorio)</li>
+                        <li><strong>alt</strong>: Texto alternativo para accesibilidad (obligatorio)</li>
+                        <li><strong>width</strong>: Ancho de la imagen en pixeles</li>
+                        <li><strong>height</strong>: Alto de la imagen en pixeles</li>
+                        <li><strong>title</strong>: Titulo que aparece al pasar el mouse </li>
+                        <li><strong>loading</strong>: Comportamiento de carga (lazy, eager)</li>
+                    </ul>
+                </div>
+
+                <div class="tag-section">
+                    <h3><i class="fast-code"></i>Ejemplo de código</h3>
+                    <div class="code-example">
+                        <pre><code>
+                                &lt;img src="https://shorturl.at/8UB0s" alt="Descripción de la imagen"
+                                width="400" height="300" title="Titulo de la imagen"&gt;
+                            </code></pre>
+                    </div>
+                </div>
+
+                <div class="tag-section">
+                    <h3><i class="fast paint-brush"></i>CSS Asociado</h3>
+                    <div class="code-example">
+                        <pre><code>
+                                img{
+                                    max-width: 100%;
+                                    height: auto;
+                                    border-radius: 4px;
+                                    box-shadow: 0 2px 4px rgba(0,0,0,0,1);
+                                }
+                            </code></pre>
+                    </div>
+                    <p>Estas reglas hacen las imagenes responsivas y les añaden estilos visuales</p>
+                </div>
+
+                <div class="tag-section">
+                    <h3><i class="fast-eye"></i>Resultado Visual</h3>
+                    <div class="visual-example">
+                        <img src="https://shorturl.at/8UB0s" alt="Imagen de Ejemplo" width="400" height="400">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--División <div> -->
+        <div class="tag-card" id="estructura">
+            <div class="tag-header">
+                <h2><i class="fast-square"></i>División &lt;div&gt;</h2>
+            </div>
+            <div class="tag-body">
+                <div class="tag-section">
+                    <h3><i class="fast-cog"></i>Descripción</h3>
+                    <p>Contenedor genérico que agrupa elementos para propósitos de estilos
+                        o para crear secciones en un documento. No tiene significado semántico.
+                    </p>
+                </div>
+
+                <div class="tag-section">
+                    <h3><i class="fast-code"></i>Ejemplo de código</h3>
+                    <div class="code-example">
+                        <pre><code>&lt;div class="contenedor"&gt;
+                                &lt;h2&gt; Título de Sección &lt;/h2&gt;
+                                &lt;p&gt;Contenido dentro del div&lt;/p&gt;
+                                &lt;/div&gt; 
+                            </code></pre>
+                    </div>
+                </div>
+
+                <div class="tag-section">
+                    <h3><i class="fast paint-brush"></i>CSS Asociado</h3>
+                    <div class="code-example">
+                        <pre><code>
+                                .contenedor{
+                                    background-color: #f0f8ff;
+                                    padding: 20px;
+                                    border: 1px solid #d1e7ff;
+                                    border-radius: 8px;
+                                    margin-bottom: 20px;
+                                }
+                            </code></pre>
+                    </div>
+                    <p>Estas reglas aplican estilos visuales a los contenedores Div.</p>
+                </div>
+
+                <div class="tag-section">
+                    <h3><i class="fast-eye"></i>Resultado Visual</h3>
+                    <div class="visual-example">
+                        <div class="example-div">
+                            <h2>Título de Sección</h2>
+                            <p>Contenido dentro del div</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Etiqueta Span <span> -->
+        <div class="tag-card">
+            <div class="tag-header">
+                <h2><i class="fast i-cursor"></i>Span &lt;span&gt;</h2>
+            </div>
+            <div class="tag-body">
+                <div class="tag-section">
+                    <h3><i class="fast info-circle"></i>Descripción</h3>
+                    <p>Contenedor en línea genérico para texto o elementos en linea. Se usa para 
+                        aplicar estilos a una parte de un texto sin cambiar su significado real.
+                    </p>
+                    <div class="tag-section">
+                        <h3><i class="fast-cog"></i>Atributos comunes</h3>
+                        <ul class="attributes-list">
+                            <li><strong>id</strong>: Identificador único</li>
+                            <li><strong>class</strong>: Clase CSS para estilos</li>
+                            <li><strong>style</strong>: Estilos CSS en linea</li>
+                        </ul>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast-code"></i>Ejemplo de código</h3>
+                        <div class="code-example">
+                            <pre><code>
+                                &lt;p&gt; Este es un texto con una parte &lt;span class="destacado"&gt;
+                                resaltada&lt;/span&gt;.&lt;/p&gt;
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast paint-brush"></i>CSS Asociado</h3>
+                        <div class="code-example">
+                            <pre><code>
+                                .destacado{
+                                    background-color: var(--warning-color);
+                                    color: white;
+                                    padding: 2px 6px;
+                                    border-radius: 4px;
+                                }
+                            </code></pre>
+                        </div>
+                        <p>Estas reglas destacan o resaltan visualmente el texto asociado en el span</p>
+
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast paint-brush"></i>CSS Asociado</h3>
+                        <div class="visual-example">
+                            <p>Este es un texto con una parte <span class="example-span">resaltada</span>.</p>
+                        </div>
+                    </div>    
+
+                </div>
+            </div>
+
+            <!--Lista no ordenada <ul> -->
+            <div class="tag-card" id="listas">
+                <div class="tag-header">
+                    <h2><i class="fast list-ul"></i>Lista no ordenada &lt;ul&gt;</h2>
+                </div>
+                <div class="tag-body">
+                    <div class="tag-section">
+                        <h3><i class="fast info-circle"></i>Descripción</h3>
+                        <p>Crea una lista de elementos sin un orden especifico, cada elemento de la 
+                            lista se define con &lt;li&gt;
+                        </p>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast-cog"></i>Atributos comunes</h3>
+                        <ul class="attributes-list">
+                            <li><strong>id</strong>: Identificador único</li>
+                            <li><strong>class</strong>: Clase CSS para estilos</li>
+                            <li><strong>style</strong>: Estilos CSS en linea</li>
+                        </ul>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast-code"></i>Ejemplo de código</h3>
+                        <div class="code-example">
+                            <pre><code>
+                                &lt;ul&gt;
+                                &lt;li&gt;Elemento 1&lt;/li&gt;
+                                &lt;li&gt;Elemento 2&lt;/li&gt;
+                                &lt;li&gt;Elemento 3&lt;/li&gt;
+                                &lt;/ul&gt;
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast paint-brush"></i>CSS Asociado</h3>
+                        <div class="code-example">
+                            <pre><code>
+                                ul{
+                                    list-style-type: disc;
+                                    padding-left: 1.5rem;
+                                    margin-bottom: 1rem;
+                                }
+
+                                ul li {
+                                    margin-bottom: 0.5rem;
+                                }
+                            </code></pre>
+                        </div>
+                        <p>Estas reglas estilizan las listas con viñetas y espaciado.</p>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast-eye"></i>Resultado visual</h3>
+                        <div class="visual-example">
+                            <ul>
+                                <li>Elemento 1</li>
+                                <li>Elemento 2</li>
+                                <li>Elemento 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Lista Ordenada <ol> --> 
+            <div class="tag-card">
+                <div class="tag-header">
+                    <h2><i class="fast list-ol"></i>Lista Ordenada &lt;ol&gt;</h2>
+                </div>
+                <div class="tag-body">
+                    <div class="tag-section">
+                        <h3><i class="fast info-circle"></i>Descripción</h3>
+                        <p>Crea una lista numerada de elementos donde el orden es importante.
+                            Cada elemento de la lista se define con &lt;li&gt;
+                        </p>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast-cog"></i>Atributos comunes</h3>
+                        <ul class="attributes-list">
+                            <li><strong>type</strong>: Tipo de numeración (1, A, a, I, i)</li>
+                            <li><strong>start</strong>: Número inicial de la lista</li>
+                            <li><strong>reversed</strong>: Invierte el orden de la numeración</li>
+                            <li><strong>id</strong>: Identificador único</li>
+                        </ul>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast-code"></i>Ejemplo de código</h3>
+                        <div class="code-example">
+                            <pre><code>
+                                &lt;ol type="1" start="1"&gt; 
+                                &lt;li&gt; &lt;/li&gt;
+                                &lt;li&gt; &lt;/li&gt;
+                                &lt;li&gt; &lt;/li&gt;
+                                &lt;/ol&gt;
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast paint-brush"></i>CSS Asociado</h3>
+                        <div class="code-example">
+                            <pre><code>
+                                ol {
+                                    list-style-type: decimal;
+                                    padding-left: 1.5rem;
+                                    margin-bottom: 1rem;
+                                }
+
+                                ol li {
+                                    margin-bottom 0.5rem;
+                                }
+                            </code></pre>
+                        </div>
+                        <p> Estas reglas estilizan la lista numerada con espaciado adecuado.</p>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><i class="fast-eye"></i>Resultado Visual</h3>
+                        <div class="visual-example">
+                            <ol>
+                                <li>Primer paso</li>
+                                <li>Segundo paso</li>
+                                <li>Tercer paso</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Tabla <table>-->
+
+            <div class="tag-card" id="tablas">
+                <div class="tag-header">
+                    <h2><i class="fast info-circle"></i>Descripción</h2>
+                    <p>Crea una tabla para mostrar datos tabulares. Se compone de filas (&lt;tr&gt;) celdas de encabezado (&lt;th&gt;) y celdas de datos (&lt;td&gt;) y celdas de datos (&lt;td&gt;)</p>
+                </div>
+
+                <div class="tag-section">
+                    <h3><i class="fast-cog"></i>Atributos comunes</h3>
+                    <ul class="attributes-list">
+                        <li><strong>border</strong>: Ancho del borde de la tabla</li>
+                        <li><strong>cellpadding</strong>: Espacio entre las celdas</li>
+                        <li><strong>cellspacing</strong>: Espacio entre celdas</li>
+                        <li><strong>width</strong>: Ancho de la tabla</li>
+                    </ul>
+                </div>
+
+                <div class="tag-section">
+                    <h3><i class="fast-code"> </i>Ejemplo de codigo</h3>
+                    <pre><code>
+                        &lt;table&gt;
+                            &lt;tr&gt;
+                                &lt;th&gt;Encabezado 1&lt;/th&gt;
+                                &lt;th&gt;Encabezado 2&lt;/th&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;Dato 1&lt;/td&gt;
+                                &lt;td&gt;Dato 2&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/table&gt;
+                    </code></pre>
+                </div>
+            </div>
+
+            <div class="tag-section">
+                <h3><i class="fast paint-brunsh"></i>CSS asociado</h3>
+                <div class="code-example">
+                    <pre><code>
+                        table{
+                            width: 100%;
+                            border-collapse: collapse;
+                            margin:1rem 0;
+                        }
+                        
+                        
+                        
+                        th, td{
+                            border: 1px solid #ddd;
+                            padding: 8px;
+                            text-align: left;
+                        }
+
+                        th{
+                            bacground-color: var(--primary-color);
+                            color:white;
+
+                        }
+
+                        tr:nth-child(even){
+                            background-color: #f2f2f2;
+                        }
+                    </code></pre>
+                </div>
+
+                <p>Estas reglas mejoran la aparinecia y legibilidad de las tablas</p>
+            </div>
+
+            <div class="tag-section">
+                <h3><i class="fast-eye"></i>Resultado visual</h3>
+                <div class="visual-example">
+                    <table class="example-table">
+                        <tr>
+                            <th>Encabezado1</th>
+                            <th>Encabezado2</th>
+                        </tr>
+                        <tr>
+                            <td>Dato1</td>
+                            <td>Dato2</td>
+                        </tr>
+                        <tr>
+                            <td>Dato3</td>
+                            <td>Dato4</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!--Formulario form-->
+        <div class="tag-card" id="formularios">
+            <div class="tag-header">
+                <h2><i class="tag window-restore"></i>Formulario &lt;form&gt;</h2>
+            </div>
+            <div class="tag-body">
+                <div class="tag-section">
+                    <h3><i class="fast info-circle"></i>Descripcion</h3>
+                    <p>Crea un formulario para recopilar datos del usuario. contiene elementos de entrada como campos de texto, casillas de verificación botones etc.....</p>
+                </div>
+                <div class="tag-section">
+                    <h3><i class="fast-code"></i>Atributos comunes</h3>
+                    <ul class="attributes-list">
+                        <li><strong>action</strong>: URL a la que se enviarán los datos del formulario</li>
+                        <li><strong>method</strong>: Método  HTTP para envío de datos(GET, POST)</li>
+                        <li><strong>name</strong>: nombre del formulario</li>
+                        <li><strong>target</strong>: Donde mostrar la respuesta (_blank, _self)</li>
+                        <li><strong>autocomplete</strong>: Habilita o desabilita el autocompletado.</li>
+                    </ul>
+                </div>
+
+                <div class="tag-section">
+                    <h3><i class="fast-code"></i>Ejemplo de codigo</h3>
+                    <div class="code-example">
+                        <pre><code>
+                            &lt;form action="/submit" method="POST"&gt;
+                                &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+                                &lt;input type="text" id="nombre" name="nombre" required&gt;
+
+                                &lt;label for="email"&gt;Email:&lt;/label&gt;
+                                &lt;input type="email" id="email" name="email" required&gt;
+
+                                &lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;
+                                &lt;textarea id="mensaje" name="mensaje" rows="4" required&gt;&lt;/textarea&gt;
+
+                                &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+                            &lt;/form&gt;
+                        </code></pre>
+                    </div>
+                </div>
+
+                <div class="tag-section">
+                    <h3><i class="fast paint-brunsh"></i>CSS asociado</h3>
+                    <div class="code-example">
+                        <pre><code>
+                            form{
+                                background-color: #fff;
+                                padding:20px;
+                                border-radius: 8px;
+                                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                            }
+
+                            label{
+                                display:block;
+                                margin-bottom:5px;
+                                font-weight:bold;
+                            }
+
+                            input, textarea, select{
+                                width:100%;
+                                padding:8px;
+                                margin:5px 0 15px;
+                                border:1px, solid #ddd;
+                                border-radius:4px;
+                            }
+
+                            button{
+                                background-color: var(--primary-color);
+                                color:white;
+                                border: none;
+                                padding: 10px 20px;
+                                border-radius: 4px;
+                                cursor:pointer;
+                            }
+                        </code></pre>
+                    </div>
+
+                    <p>Estas reglas mejoran la apariencia y la visibilidad del formulario.</p>
+                </div>
+
+                <div class="tag-section">
+                    <h3><i class="fast-eye"></i>Visualización del formulario</h3>
+                    <div class="visual-example">
+                        <form class="example-form">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Su nombre">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required placeholder="ejemplo@itc.edu.co">
+
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Guia de etiquetas en HTML &copy;2026</p>
+        <p>Estructurado para el aprendizaje de HTML y CSS </p>
+    </footer>
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>

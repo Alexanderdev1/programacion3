@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Propiedades css</title>
+    <link rel="icon" href="./img/nestJS.png" type="image/x-icon" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style2.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-code">Guia de propiedades de CSS</i></h1>
+            <p>
+                Explicaciones detalladas y ejemplos practticos de las propiedades de
+                CSS mas importantes.
+            </p>
+        </header>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#display" class="active">Display & Position</a></li>
+                <li><a href="#boxmodel"> Box Model</a></li>
+                <li><a href="#flexbox">Flexbox</a></li>
+                <li><a href="#grid">CSS Grid</a></li>
+                <li><a href="#transform">Transform</a></li>
+                <li><a href="#animation">Animaciones</a></li>
+            </ul>
+        </nav>
+
+        <div class="properties-container">
+            <!--Propiedad Display-->
+            <div class="property-card" id="display">
+                <div class="property-header">
+                    <h2><i class="fas fa-square"></i>Propiedad Display</h2>
+                </div>
+                <div class="property-body">
+                    <div class="property-section">
+                        <h3><i class="fas fa-info-circle"></i>Descripcion</h3>
+                        <p>
+                            La propuedad <strong>Display</strong>especifica el tipo de
+                            cuadro de representacion utilziado para un elemento. Es uan de
+                            las propiedades de CSS mas importanmtes para el control del
+                            diseño.
+                        </p>
+                    </div>
+                    <div class="property-section">
+                        <h3><i class="fas fa-cog"></i>Valores Comúnes</h3>
+                        <ul class="attributes-list">
+                            <li>
+                                <strong>block</strong>: El elemento genera un cuadro de
+                                bloque, ocupando todo el ancho disponible
+                            </li>
+                            <li>
+                                <strong>inline</strong>: El eleemnto genera uno o mas cuadros
+                                en linea que no generan saltos de linea
+                            </li>
+                            <li>
+                                <strong>inline-block</strong>: Similar a inline pero permite
+                                establecer width y heigth
+                            </li>
+                            <li><strong>flex</strong>: Establece un contenedor flexible</li>
+                            <li>
+                                <strong>grid</strong>: Establece un contenedor de cuadricula
+                            </li>
+                            <li><strong>none</strong>: Oculta completamente el elemento</li>
+                        </ul>
+                    </div>
+
+                    <div class="property-section">
+                        <h3><i class="fas fa-code"></i>Ejemplo de codigo</h3>
+                        <div class="code-example">
+                            <pre>
+                                <code>
+.elemento{
+    display:block;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.oculto{
+    display:none;
+}
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="property-section">
+                        <h3><i class="fas fa-eye"></i>Resultado visual</h3>
+                        <div class="visual-example">
+                            <h4>
+                                Elementos con display: block(por defecto apra div, p, h1....)
+                            </h4>
+                            <div style="
+                    background-color: #4361ee;
+                    color: white;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                  ">
+                                Bloque 1
+                            </div>
+                            <div style="background-color: #4895ef; color: white; padding: 10px">
+                                Bloque 2
+                            </div>
+
+                            <h4>
+                                Elementos cond display: inline(por defecto para span, a,
+                                strong...)
+                            </h4>
+                            <p>
+                                Este es un
+                                <span style="
+                      background-color: #f72585;
+                      color: white;
+                      padding: 2px 5px;
+                    ">elemto en linea</span>
+                                dentro de un parrafo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Propiedad position-->
+            <div class="property-card">
+                <div class="property-header">
+                    <h2><i class="fas fa-arrows-alt"></i>Propuedades postion</h2>
+                </div>
+                <div class="property-body">
+                    <div class="property-section">
+                        <h3><i class="fas fa-info-circle"></i>Descripcion</h3>
+                        <p>
+                            La propuedad <strong>position</strong> especifica el metodo de
+                            posicionamiento par un elemento. Los elementos posicionados se
+                            colocan usando las propiedades top,right, bottom y left.
+                        </p>
+                    </div>
+
+                    <div class="property-section">
+                        <h3><i class="fas fa-cog"></i>Valores comunes</h3>
+                        <ul class="attributes-list">
+                            <li>
+                                <strong>static</strong>: valor por defecto, sigue el fluje
+                                nomal del documento.
+                            </li>
+                            <li>
+                                <strong>relative</strong>: se posiciona relativo a su posicion
+                                normal.
+                            </li>
+                            <li>
+                                <strong>absolute</strong>: se posiciona relativo al ancestro
+                                mas cercano posicionado como mas cercano
+                            </li>
+                            <li>
+                                <strong>fixed</strong>: se posiciona relativo a la ventana del
+                                navegador.
+                            </li>
+                            <li>
+                                <strong>sticky</strong>: alterna entre relative y fexed basado
+                                en el scroll
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="property-section">
+                        <h3><i class="fas fa-code"></i>Ejemplo de codigo</h3>
+                        <div class="code-example">
+                            <pre>
+                                <code>
+.relativo{
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
+.fijo{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+
+.absoluto{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="property-section">
+                        <h3><i class="fas fa-eye"></i>Resultado visual</h3>
+                        <div class="visual-example">
+                            <h4>Elemento con position: relative</h4>
+                            <div style="
+                    position: relative;
+                    top: 0;
+                    left: 30px;
+                    background-color: #4895ef;
+                    color: white;
+                    padding: 10px;
+                    width: fit-content;
+                  ">
+                                Este div esta desplazado 30px desde la izquierda
+                            </div>
+
+                            <h4>
+                                Elemento con position: absolute (dentro del contenmedor
+                                relativo)
+                            </h4>
+                            <div class="example-position">
+                                Contenedor con position: relative;
+                                <div class="positioned-item">Elemento Absoluto</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Box Model-->
+            <div class="property-card" id="boxmodel">
+                <div class="property-header">
+                    <h2><i class="fas fa-square-full"></i>Box Model</h2>
+                </div>
+                <div class="property-body">
+                    <div class="property-section">
+                        <h3><i class="fas fa-info-circle"></i>Descripcion</h3>
+                        <p>
+                            El <strong>Box Model</strong>(modelo de caja) es fundamental en
+                            CSS, cada elemento es representado como una caja rectangular con
+                            las siguientes partes: contenido, padding, border y margin.
+                        </p>
+                    </div>
+
+                    <div class="property-section">
+                        <h3><i class="fas fa-cog"></i>Propiedades relacionadas</h3>
+                        <ul class="attributes-list">
+                            <li><strong>width</strong>: Ancho del contenido</li>
+                            <li><strong>heigth</strong>: Alto del contenido</li>
+                            <li>
+                                <strong>padding</strong>: Espacio entre el contenido y el
+                                borde
+                            </li>
+                            <li>
+                                <strong>border</strong>: Borde alrededor del padding y el
+                                contenido
+                            </li>
+                            <li>
+                                <strong>margin</strong>: Espacio exterior, fuera del borde
+                            </li>
+                            <li>
+                                <strong>box-sizing</strong>: Cmabia como se calculan width y
+                                height
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="property-section">
+                        <h3><i class="fas fa-code"></i>Ejemplo de codigo</h3>
+                        <div class="code-example">
+                            <pre>
+                                    <code>
+.caja{
+   width: 200px;
+   height: 100px;
+   padding: 20px;
+   border: 5px solid #4361ee;
+   margin: 30px; 
+}
+
+/*Border-box incluye padding y border en el width/heigth*/
+.caja-inteligente{
+    box-sizing: border-box;
+    width: 200px;
+    padding: 20px;
+}
+                                    </code>
+                                </pre>
+                        </div>
+                    </div>
+
+                    <div class="property-section">
+                        <h3><i class="fas fa-eye"></i>Resultado visual</h3>
+                        <div class="visual-example">
+                            <h4>Box Model Tradicional (content-box)</h4>
+                            <div style="
+                    width: 200px;
+                    height: 100px;
+                    padding: 20px;
+                    border: 5px solid #4361ee;
+                    margin: 30px;
+                    background-color: #f8f9fa;
+                  ">
+                                Ancho total: 200 + 40 + 10 = 250px
+                            </div>
+                            <h4>Box MOdel con box-sizing: border-box</h4>
+                            <div style="
+                    box-sizing: border-box;
+                    width: 200px;
+                    height: 100px;
+                    padding: 20px;
+                    border: 5px solid #f72585;
+                    margin: 30px;
+                    background-color: #f8f9fa;
+                  ">
+                                Ancho total 200px (Inclute padding y border)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Flexbox-->
+            <div class="property-card" id="flexbox">
+                <div class="property-header">
+                    <h2><i class="fas fa-th"></i>Flexbox</h2>
+                </div>
+                <div class="property-body">
+                    <div class="property-section">
+                        <h3><i class="fas fa-info-circle"></i>Descripcion</h3>
+                        <p><strong>Flexbox</strong> es un modelo de un layout unidimensional para direccionar el espacio
+                            entre elementos y alinearlos de manera eficiente.</p>
+                    </div>
+
+                    <div class="property-section">
+                        <h3><i class="fas fa-cog"></i>Propiedades principales</h3>
+                        <ul class="attributes-list">
+                            <li><strong>display: flex</strong>: Convierte un contenedor en flex</li>
+                            <li><strong>flex-direction</strong>: Direccion de los elementos. (row, column)</li>
+                            <li><strong>justify-content</strong>: Alineacion al eje principal</li>
+                            <li><strong>align-items</strong>: Alineacion al eje cruzado</li>
+                            <li><strong>flex-wrap</strong>:Controla si los elementos deben tener wrap</li>
+                            <li><strong>gap</strong>:Espacio entre elementos.</li>
+                        </ul>
+                    </div>
+
+                    <div class="property-section">
+                        <h3><i class="fas fa-code"></i>Ejemplo de codigo</h3>
+                        <div class="code-example">
+                            <pre>
+                            <code>
+.contenedor-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.elemento-flex{
+    flex:1; /*Ocupacion de espacio disponible*/
+}
+                            </code>
+                        </pre>
+                        </div>
+                    </div>
+
+                    <div class="property-section">
+                        <h3><i class="fas fa-eye"></i>Resultado visual</h3>
+                        <div class="visual-example">
+                            <div class="example-flex-container">
+                                <h4>Contenedor flex con justify-content: space-between</h4>
+                                <div class="example-flex" style="justify-content: space-between;">
+                                    <div class="flex-item">1</div>
+                                    <div class="flex-item">2</div>
+                                    <div class="flex-item">3</div>
+                                </div>
+                            </div>
+
+                            <div class="example-flex-container">
+                                <h4>Contenedor flex con justify-content: center</h4>
+                                <div class="example-flex" style="justify-content: center;">
+                                    <div class="flex-item">1</div>
+                                    <div class="flex-item">2</div>
+                                    <div class="flex-item">3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Grid-->
+            <div class="property-card" id="grid">
+                <div class="property-header">
+                    <h2><i class="fas fa-th"></i>Grid</h2>
+                </div>
+                <div class="property-body">
+                    <h3><i class="fas fa-info-circle"></i>Descripcion</h3>
+                    <p><strong>CSS Grid</strong> es un sistema de layout bidimensional que permite crear diseños
+                        complejos mediante la definicion de filas y coluimnas. Es ideal para estructuras generelaes de
+                        pagina</p>
+                </div>
+
+                <div class="property-section">
+                    <h3><i class="fas fa-cog"></i>Propiedades principales</h3>
+                    <ul class="attributes-list">
+                        <li><strong>display: grid</strong>: Convierte un contenedor en grid</li>
+                        <li><strong>grid-template-columns</strong>: Define las columnas de grid</li>
+                        <li><strong>grid-template-rows</strong>: Define las filas del grid</li>
+                        <li><strong>gap</strong>: Espacio entre elementos</li>
+                        <li><strong>grid-area</strong>:Especifica ubicacion y tamaño de un elemento</li>
+                        <li><strong>grid-template-areas</strong>:Define un templete con nombres</li>
+                    </ul>
+                </div>
+
+                <div class="property-section">
+                    <h3><i class="fas fa-code"></i>Ejemplo de codigo</h3>
+                    <div class="code-example">
+                        <pre>
+                            <code>
+.contenedor-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 100px auto 100px;
+    gap: 15px;
+}
+
+.cabezera{
+    grid-column:1/4; /*Ocupa desde la columna 1 hasta la 4*/
+}
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+                <div class="property-section">
+                    <h3><i class="fas fa-eye"></i>Resultado visual</h3>
+                    <div class="visual-example">
+                        <div class="example-flex-container">
+                            <h4>Grid de 4 columnas y 2 filas</h4>
+                            <div class="example-grid">
+                                <div class="grid-item">1</div>
+                                <div class="grid-item">2</div>
+                                <div class="grid-item">3</div>
+                                <div class="grid-item">4</div>
+                                <div class="grid-item">5</div>
+                                <div class="grid-item">6</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Transform-->
+            <div class="property-card" id="transform">
+                <div class="property-header">
+                    <h2><i class="fas fa-sync-alt"></i>Transform</h2>
+                </div>
+                <div class="property-body">
+                    <div class="property-section">
+                        <h3><i class="fas fa-info-circle"></i>Descripción</h3>
+                        <p>
+                            La propiedad <strong>transform</strong> permite modificar
+                            visualmente un elemento mediante rotación, escala, inclinación
+                            o traslación. Estas transformaciones no afectan el layout
+                            alrededor del elemento.
+                        </p>
+                    </div>
+
+                    <div class="property-section">
+                        <h3><i class="fas fa-cog"></i>Funciones Comúnes</h3>
+                        <ul class="attributes-list">
+                            <li>
+                                <strong>translate()</strong>: Mueve el elemento en el plano.
+                            </li>
+                            <li>
+                                <strong>rotate()</strong>: Rota el elemento (grados, radianes).
+                            </li>
+                            <li>
+                                <strong>scale()</strong>: Escala el elemento
+                                (aumenta/disminuye tamaño).
+                            </li>
+                            <li>
+                                <strong>skew()</strong>: Inclina el elemento.
+                            </li>
+                            <li>
+                                <strong>matrix()</strong>: Combina todas las transformaciones.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="property-section">
+                        <h3><i class="fas fa-code"></i>Ejemplo de Código</h3>
+
+                        <div class="code-example">
+                            <pre>
+                    <code>
+.rotar {
+    transform: rotate(45deg);
+}
+
+.escalar {
+    transform: scale(1.2);
+}
+
+.mover {
+    transform: translate(50px, 20px);
+}
+
+.combinar {
+    transform: rotate(20deg) scale(1.1);
+}
+                    </code>
+                </pre>
+                        </div>
+                    </div>
+
+                    <div class="property-section">
+                        <h3><i class="fas fa-eye"></i>Resultado visual</h3>
+
+                        <div class="visual-example">
+                            <div class="transform-demo-group">
+                                <h4>Transformaciones Básicas</h4>
+                                <div class="transform-row">
+                                    <div style="display:flex; gap: 20px; flex: wrap">
+                                        <div style="transform: rotate(15deg);background-color: #4361ee; color: white; padding: 10px; margin: 10px;">
+                                            Rotación
+                                        </div>
+                                        <div style="transform: scale(1.2);background-color: #f72585; color: white; padding: 10px; margin: 10px;">
+                                            Escala
+                                        </div>
+                                        <div style="transform: translate(20px, 10px); background-color: #4cc9f0; color: white; padding: 10px; margin: 10px;">
+                                            Traslacion
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="transform-demo-group">
+                                <h4>Transformación 3d con perspectiva</h4>
+                                <div class="transform-perspective">
+                                    <div class="example-transform">3D<br>Transform</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Animaciones-->
+            <div class="property-card" id="animation">
+                <div class="property-header">
+                    <h2><i class="fas fa-film"></i>Animaciones</h2>
+                </div>
+
+                <div class="property-body">
+                    <div class="property-section">
+                        <h3><i class="fas fa-info-circle"></i>Descripción</h3>
+                        <p>
+                            Las <strong>animaciones en CSS</strong> permiten crear transiciones y animaciones entre
+                            estilos sin necesidad de JavaScript. Se definen mediante reglas keyframes que especifican
+                            los estados de la animacion
+                        </p>
+                    </div>
+
+                    <div class="property-section">
+                        <h3><i class="fas fa-cog"></i>Propiedades Comunes</h3>
+                        <ul class="attributes-list">
+                            <li><strong>animation-name</strong>: Nombre de la animación(@Keyframes)</li>
+                            <li><strong>animation-duration</strong>: Duración de la animación.</li>
+                            <li><strong>animation-timing-function</strong>: Funcion de temporización.</li>
+                            <li><strong>animation-delay</strong>: Retraso antes de comenzar.</li>
+                            <li><strong>animation-iteration-count</strong>: Número de repeticiones.</li>
+                            <li><strong>animation-direction</strong>: Dirección de la animación.</li>
+                        </ul>
+                    </div>
+
+                    <div class="property-section">
+                        <h3><i class="fas fa-code"></i>Ejemplo de Código</h3>
+
+                        <div class="code-example">
+                            <pre>
+                                <code>
+/*Definir la animación*/
+@keyframes ehenoki{
+    0% { opacity: 0; }
+    100% { opacity:1; }
+}
+
+/*Aplicar la animacion*/
+.elemento{
+    animation-name: ejemplo;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/*Forma abreviada*/
+.elemento-corto{
+    animation: ejemplo 2s ease-in-out infinite;
+}
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="property-section">
+                        <h3><i class="fas fa-eye"></i>Resultado visual</h3>
+
+                        <div class="visual-example">
+                            <div class="animation-demo">
+                                <h4>Animacion de pulsacion (pulse)</h4>
+                                <div class="example-animation"></div>
+                                <h4>Animacion de cambio de color</h4>
+                                <div style="width: 100px; height: 100px; background-color: #4361ee; animation:color-change 3s infinite; border-radius:8px"></div>
+
+                                <style>
+                                    @keyframes color-change {
+                                        0% { background-color: #4361ee; }
+                                        50% { background-color: #f72585; }
+                                        100% { background-color: #4361ee; }
+                                    }
+                                </style>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Guia de propeidades de CSS</p>
+            <p>Recurso adaptada co nel fin de comprender y analziar las propeidades princippales de CSS.</p>
+            <p>Alexander Muñoz</p>
+        </footer>
+    </div>
+
+    <script>
+        //Navegacion suave
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e){
+                e.preventDefault();
+
+                //remover las calses activas de todos los enalces
+                document.querySelectorAll('nav a').forEach(a =>{
+                    a.classList.remove('active');
+                });
+
+                //añadir clase activa al enlace seleccionado
+                this.classList.add('active');
+
+                //Desplazamiento suave
+                const targetId = this.getAttribute('href')
+                const targetElement = document.querySelector(targetId);
+
+                window.scrollTo({
+                    top:targetElement.offsetTop -80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
