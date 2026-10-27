@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario De Contacto</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="contenedor">
+        <section class="targeta">
+            <header class="encabezado">
+                <h1>Formulario de contacto</h1>
+                <p>Completa los campos para enviar tu mensaje.</p>
+            </header>
+
+            <form action="php/interconexion.php" id="formularioContacto" method="POST">
+                <div class="campo">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" name="nombre_completo" maxlength="120" autocomplete="name" required>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo Electronico *</label>
+                    <input type="email" id="correo" name="correo" maxlength="190" autocomplete="email" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Telefono *</label>
+                    <input type="tel" id="telefono" name="telefono" maxlength="30" autocomplete="tel">
+                </div>
+
+                <div class="campo">
+                    <label for="asunto">Asunto *</label>
+                    <select name="asunto" id="asunto" required>
+                        <option value="">Seleccione una opcion</option>
+                        <option value="Consulta General">Consulta General</option>
+                        <option value="Soporte Tecnico">Soporte Tecnico</option>
+                        <option value="Solicitud de Información">Solicitud de información</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea name="mensaje" id="mensaje" rows="5" maxlength="3000" required></textarea>
+                </div>
+
+                <div class="consentimiento">
+                    <label for="acepta_tratamiento">
+                        <input type="checkbox" id="acepta_tratamiento" name="acepta_tratamiento" value="1" required>
+                        He leido el aviso de privacidad y acepto el tratamiento de mis datos personales.*
+                    </label>
+                </div>
+
+                <p id="mensajeEstado" class="mensaje-estado" role="status" aria-live="polite"></p>
+
+                <div class="acciones">
+                    <button type="submit" id="botonEnviar">Enviar Mensaje</button>
+                    <button type="reset" class="boton-secundario">Limpiar</button>
+                </div>
+
+                <p class="nota">Los campos marcados con * son <strong> OBLIGATORIOS</strong>.</p>
+            </form>
+        </section>
+    </main>
+    <script src="js/script.js" defer></script>
+</body>
+</html>

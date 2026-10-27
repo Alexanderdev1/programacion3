@@ -1,0 +1,173 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.5 ;
+}
+
+/*Contenedor principal*/
+.contenedor{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 16px;
+}
+
+/*Targeta del formulario*/
+.targeta{
+    width: 100%;
+    max-width: 620px;
+    background: #ffff;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(15 ,23,42,0.08);
+}
+
+/*Encabezado*/
+.encabezado{
+    margin-bottom: 24px;
+    text-align:center;
+}
+
+.encabezado h1{
+    margin: 0 0 10px;
+    font-size: 28px;
+    color: #1d4ed8;   
+}
+
+.encabezado p{
+    margin: 0;
+    color: #64748b;
+}
+
+/*Campos de formulario*/
+.campo{
+    margin-bottom: 20px;
+}
+
+.campo > label{
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea{
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cdb5e1;
+    border-radius: 8px;
+    font: inherit;
+    background: #ffff;
+    color: #1e293b;
+}
+
+
+/*Enfoque y accesibilidad*/
+input:focus,
+select:focus,
+textarea:focus{
+    outline: 3px solid #bfdbfe;
+    border-color: #2563eb;
+}
+
+textarea{
+    resize: vertical();
+    min-height: 120px;
+}
+
+/*Conmsentimiento*/
+.consentimiento > label{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-weight: normal;
+}
+
+.consentimiento input{
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+/*Botones*/
+.acciones{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+button{
+    flex: 1;
+    min-width: 140px;
+    padding: 13px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #1d4ed8;
+    color: #ffffff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #1d4ed8;
+}
+
+button:focus-visible{
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+button:disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+button.boton-secundario{
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+button.boton-secundario:hover{
+    background: #cdb5e1;
+}
+
+/*Mensajes*/
+.mensaje-estado{
+    min-height: 0;
+    margin: 0;
+    color: #b91c1c;
+}
+.nota{
+    margin-top: 20px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/*Diseño responsivo*/
+@media(max-width:480px){
+    .targeta{
+        padding: 22px 18px;
+    }
+    .encabezado h1{
+        font-size: 23px;
+    }
+    .acciones{
+        flex-direction: column;
+    }
+
+    buttom{
+        width: 100%;
+    }
+}
