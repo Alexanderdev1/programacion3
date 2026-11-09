@@ -27,7 +27,7 @@ body{
     background: #ffff;
     padding: 32px;
     border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(15 ,23,42,0.08);
+    box-shadow: 0 8px 30px rgba(0, 255, 123, 0.962);
 }
 
 /*Encabezado*/
@@ -39,7 +39,7 @@ body{
 .encabezado h1{
     margin: 0 0 10px;
     font-size: 28px;
-    color: #1d4ed8;   
+    color: #f69607;   
 }
 
 .encabezado p{
@@ -113,7 +113,7 @@ button{
     padding: 13px 18px;
     border: none;
     border-radius: 8px;
-    background: #1d4ed8;
+    background: #d8d81d;
     color: #ffffff;
     font: inherit;
     font-weight: 600;
@@ -121,7 +121,7 @@ button{
 }
 
 button:hover{
-    background: #1d4ed8;
+    background: #ce5f04;
 }
 
 button:focus-visible{
